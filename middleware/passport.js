@@ -44,7 +44,7 @@ passport.deserializeUser( async function(user, done){
                 include: [
                     {
                         model: Permission,
-                        as: 'permission'
+                        as: 'permissions'
                     }
                 ],
             }

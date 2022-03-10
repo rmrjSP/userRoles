@@ -2,6 +2,10 @@ module.exports.renderAccounting = function(req, res){
     res.render('pages/accounting');
 }
 module.exports.renderDashboard = function(req, res){
+    if (!req.user.can(action)) {
+        res.render('/');
+        return
+    }
     res.render('pages/dashboard');
 }
 module.exports.renderHR = function(req, res){
